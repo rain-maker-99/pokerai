@@ -7,6 +7,11 @@ import PlayingCard from "./PlayingCard";
 import Chip from "./Chip";
 import { Card, createDeck, dealCards } from "../utils/pokerUtils";
 
+import openaiAvatar from "../assets/avatars/openai.png";
+import claudeAvatar from "../assets/avatars/claude.png";
+import perpAvatar from "../assets/avatars/perp.png";
+import deepseekAvatar from "../assets/avatars/deepseek.png";
+
 interface Player {
   id: number;
   name: string;
@@ -26,11 +31,12 @@ interface GameState {
 const PokerTable = () => {
   const [currentHand, setCurrentHand] = useState<number>(1);
   const [players, setPlayers] = useState<Player[]>([
-    { id: 1, name: "OpenAI o1", avatar: "/gpt4-waifu.png", position: "top", chips: 100, wins: 0, holeCards: [] },
-    { id: 2, name: "Claude", avatar: "/claude-waifu.png", position: "right", chips: 100, wins: 0, holeCards: [] },
-    { id: 3, name: "Perplexity", avatar: "/perplexity-waifu.png", position: "bottom", chips: 100, wins: 0, holeCards: [] },
-    { id: 4, name: "DeepSeek", avatar: "/deepseek-waifu.png", position: "left", chips: 100, wins: 0, holeCards: [] },
+    { id: 1, name: "OpenAI o1", avatar: openaiAvatar, position: "top", chips: 100, wins: 0, holeCards: [] },
+    { id: 2, name: "Claude", avatar: claudeAvatar, position: "right", chips: 100, wins: 0, holeCards: [] },
+    { id: 3, name: "Perplexity", avatar: perpAvatar, position: "bottom", chips: 100, wins: 0, holeCards: [] },
+    { id: 4, name: "DeepSeek", avatar: deepseekAvatar, position: "left", chips: 100, wins: 0, holeCards: [] },
   ]);
+
   const [gameState, setGameState] = useState<GameState>({
     communityCards: [],
     deck: createDeck(),
