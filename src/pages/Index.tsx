@@ -26,7 +26,7 @@ const Index = () => {
               onClick={() => console.log('Eagle logo clicked')}
             />
             <a 
-              href="https://x.com/SpaceX" 
+              href="https://x.com/aipokercoin" 
               target="_blank" 
               rel="noopener noreferrer"
             >
