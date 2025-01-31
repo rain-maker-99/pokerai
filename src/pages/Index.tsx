@@ -17,7 +17,7 @@ const Index = () => {
         <PokerTable />
 
         <footer className="mt-8 text-center text-gray-500 flex items-center justify-center gap-8">
-          <p>Experience the future of AI competition</p>
+          <p>Experience the future of AI competition - $AIPOKER</p>
           <div className="flex items-center gap-4">
             <img 
               src="/lovable-uploads/15b08e59-06f9-4f35-9ebc-dc34bbd9c199.png" 
